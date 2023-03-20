@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- TITLE + CHARSET + DESCRIPTION + VIEWPORT + FAVICON -->
+    <title>POS Page</title>
+    <meta charset="utf-8">
+    <meta name="description" content="PHP POS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    
+    <!-- ANDROID + CHROME + APPLE + WINDOWS APP -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="white">
+    <link rel="apple-touch-icon" href="assets/icon-512.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PHP POS">
+    <meta name="msapplication-TileImage" content="assets/icon-512.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    
+    <!-- WEB APP MANIFEST -->
+    <!-- https://web.dev/add-manifest/ -->
+    <link rel="manifest" href="5a-manifest.json">
+
+    <!-- SERVICE WORKER -->
+    <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("5b-worker.js");
+    }
+    </script>
+
+    <!-- STYLESHEET + JAVASCRIPT -->
+    <script src="4b-pos.js"></script>
+    <script src="4c-cart.js"></script>
+    <link rel="stylesheet" href="4d-pos.css">
+  </head>
+  <body>
+    <!-- (A) ITEMS LIST -->
+    <div id="left">
+      <div id="list"></div>
+    </div>
+
+    <!-- (B) CART ITEMS -->
+    <div id="right">
+      <div id="cart"></div>
+    </div>
+  </body>
+</html>
